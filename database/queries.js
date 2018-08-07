@@ -1,19 +1,19 @@
 const database = require('./database-connection')
 
 module.exports = {
-  listAll(){
+  list(){
     return database('products').select()
   },
-  readOne(id){
+  read(id){
     return database('products').select().where('id', id)
   },
-  postOne(product){
+  post(product){
     return database('products')
       .insert(product)
       .returning('*')
       .then(record => record[0])
   },
-  deleteOne(id){
+  delete(id){
     return database('products')
       .delete()
       .where('id', id)
