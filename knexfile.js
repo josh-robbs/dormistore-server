@@ -1,7 +1,7 @@
 module.exports = {
   development: {
     client: 'pg',
-    connection: 'postgres://localhost/name_of_database'
+    connection: 'postgres://localhost/dormistore'
   },
   production: {
     client: 'pg',
