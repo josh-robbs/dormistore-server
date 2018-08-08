@@ -7,19 +7,19 @@ module.exports = {
   read(id,tableName){
     return database(tableName).select().where('id', id)
   },
-  post(product){
-    return database('products')
+  post(product,tableName){
+    return database(tableName)
       .insert(product)
       .returning('*')
       .then(record => record[0])
   },
-  delete(id){
-    return database('products')
+  delete(id,tableName){
+    return database(tableName)
       .delete()
       .where('id', id)
   },
-  update(id, product){
-    return database('products')
+  update(id,product,tableName){
+    return database(tableName)
       .update(product)
       .where('id', id)
       .returning('*')

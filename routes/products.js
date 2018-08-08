@@ -22,7 +22,29 @@ router.get('/:id', (req,res,next) => {
   .catch(next)
 })
 
-router.post()
+router.post('/create', (req,res,next) => {
+  queries.post(req.body, 'products')
+  .then(product => {
+    res.status(201).json({message: 'Created'})
+  })
+  .catch(next)
+})
+
+router.delete('/:id', (req,res,next) => {
+  queries.delete(req.params.id, 'products')
+  .then(() => {
+    res.status(204).json({deleted: true});
+  })
+  .catch(next)
+})
+
+router.put('/:id', (req,res,next) => {
+  queries.update(req.params.id, req.body, 'products')
+  .then(product => {
+    res.json({product});
+  })
+  .catch(next);
+})
 
 
 
