@@ -1,11 +1,11 @@
 const database = require('./database-connection')
 
 module.exports = {
-  list(){
-    return database('products').select()
+  list(tableName){
+    return database(tableName).select()
   },
-  read(id){
-    return database('products').select().where('id', id)
+  read(id,tableName){
+    return database(tableName).select().where('id', id)
   },
   post(product){
     return database('products')
