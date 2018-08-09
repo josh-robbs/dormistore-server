@@ -28,7 +28,7 @@ exports.seed = function(knex, Promise) {
           price: 220,
           quantity: 2
         },{
-          name: "Samsung Flatscreen TV",
+          name: "Samsung TV",
           description:  "See What You've Been Missing With a Picture That's 4x The Resolution as Full HD",
           image:  "https://www.iotgadgets.com/wp-content/uploads/2018/02/samsung-tv.jpg",
           price: 400,
@@ -58,7 +58,7 @@ exports.seed = function(knex, Promise) {
           price: 100000000,
           quantity: 2
         },{
-          name: "LED Decorative Lights",
+          name: "LED Lights",
           description:  "Add some flare to your living space!",
           image:  "https://images-na.ssl-images-amazon.com/images/I/71YukOZlUsL._SL1100_.jpg",
           price: 20,
